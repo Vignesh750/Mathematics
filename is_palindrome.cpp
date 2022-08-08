@@ -10,20 +10,18 @@ using namespace std;
 //    The last digit is found by using the modulo operator
 //    Add this to a rev variable and remove the last digit from the number n by doing n/10.
 
-int is_palindrome(int n){
+bool is_palindrome(int n){
     int original = n;
     int rev = 0;
     while(n>0){
     rev = rev*10 +(n%10);
     n = n/10;
     }
-    if(rev == original){
-        return true;
-    }
-    return false;
+    return (rev==original);
 
 }
+// The time complexity of this number is theta(d) where d is the number of digits in the number n
 int main(){
-    cout << is_palindrome(985689);
+    cout << is_palindrome(9);
     return 0;
 }
