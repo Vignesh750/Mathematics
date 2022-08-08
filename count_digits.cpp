@@ -9,6 +9,7 @@ using namespace std;
 // Recursive method 
 // Logarithmic method
 //The  logarithmic method is a one liner
+// The iterative method takes theta(n) time to run
 int iterative(int n){
     int count=0;
     while(n!=0){
@@ -27,8 +28,8 @@ int logarithmic(int n){
     return floor(log10(n)+1);
 }
 int main(){
-    cout << "iterative method"<< iterative(123) << endl;
-    cout << "recursive method"<< recursive(123) << endl;
-    cout << "logarithmic method"<< logarithmic(123) << endl;
+    cout << "iterative method "<< iterative(123) << endl;
+    cout << "recursive method "<< recursive(123) << endl;
+    cout << "logarithmic method "<< logarithmic(123) << endl;
     return 0;
 }
