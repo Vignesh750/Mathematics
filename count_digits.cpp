@@ -8,7 +8,8 @@ using namespace std;
 // Iterative method
 // Recursive method 
 // Logarithmic method
-//The  logarithmic method is a one liner
+// The  logarithmic method is a one liner
+// The iterative method runs in theta(n) time.
 int iterative(int n){
     int count=0;
     while(n!=0){
