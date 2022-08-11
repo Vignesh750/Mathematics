@@ -5,10 +5,6 @@ using namespace std;
 // GCD of two number cannot be greater than the least(minimum) of two numbers.
 // So we initialize the result to be min(n,m)
 
-// Euclid's algorithm for gcd of two numbers
-// GCD(a,b) =| b if b divides a;
-//          | GCD(b,a%b) otherwise
-
 int naive(int n, int m)
 {
     int res = min(m, n);
@@ -22,6 +18,11 @@ int naive(int n, int m)
     //* This method takes O(min(n,m)) time.sa
     return res;
 }
+
+// Euclid's algorithm for gcd of two numbers
+// GCD(a,b) =| b if b divides a;
+//          | GCD(b,a%b) otherwise
+//* This euclid algorithm has O(log(min(a,b))) as time complexity.
 int euclid(int a, int b)
 {
     if (a % b == 0)

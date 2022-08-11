@@ -32,6 +32,8 @@ int gcd_euclid(int a, int b)
     {
         return gcd_euclid(b, a % b);
     }
+    //* The euclid algorithm takes O(log(min(a,b)))
+    //* so the lcm_efficient method also takes O(log(min(a,b)))
 }
 
 int lcm_efficient(int a, int b)
