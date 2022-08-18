@@ -48,7 +48,7 @@ void efficient(int n)
   {
     if (isPrimearr[i])
     {
-      for (int j = 2 * i; j <= n; j = j + i)
+      for (int j = i * i; j <= n; j = j + i)
       {
         isPrimearr[j] = false;
       }
