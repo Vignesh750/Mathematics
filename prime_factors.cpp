@@ -62,6 +62,44 @@ void efficient(int n)
     i++;
   }
 }
+void more_efficient(int n)
+{
+  if (n == 1)
+  {
+    cout << 1 << " ";
+  }
+  while (n != 1)
+  {
+    while (n % 2 == 0)
+    {
+      cout << 2 << " ";
+      n = n / 2;
+    }
+    while (n % 3 == 0)
+    {
+      cout << 3 << " ";
+      n = n / 3;
+    }
+  }
+  for (int i = 5; i * i <= n; i = i + 6)
+  {
+    while (n % i == 0)
+    {
+      cout << i << " ";
+      n = n / i;
+    }
+    while (n % (i + 2) == 0)
+    {
+      cout << i << " ";
+      n = n / i;
+    }
+  }
+
+  if (n > 3)
+  {
+    cout << n << " ";
+  }
+}
 
 int main()
 {
@@ -73,6 +111,9 @@ int main()
   cout << endl;
   cout << "The efficient method " << endl;
   efficient(n);
+  cout << endl;
+  cout << "The more efficient method" << endl;
+  more_efficient(n);
 
   return 0;
 }
